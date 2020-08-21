@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: server-one
+    destination: /
+  - source: startup.sh
+    destination: /
+  - source: web/welcome.html
+    destination: /web/
+  - source: dist
+    destination: /dist/
+
+hooks:
+  ApplicationStart:
+    - location: startup.sh
+      timeout: 3600
+      runas: root
