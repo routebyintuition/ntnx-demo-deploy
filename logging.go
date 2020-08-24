@@ -23,6 +23,11 @@ func logInit(logLocation string) {
 
 	logFile, err := os.OpenFile(logFileLocation, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
+		path, err := os.Getwd()
+		if err != nil {
+			Error.Println("could not find current directory: ", err)
+		}
+		Error.Println("current log directory to fail: ", path) //
 		log.Fatalln("Failed to open log file ", logFileLocation, ":", err)
 	}
 
