@@ -11,7 +11,7 @@ import (
 )
 
 var port = flag.Int("port", 5000, "Port to run webserver on")
-var logs = flag.String("logs", "./", "Directory to use for log storage")
+var logs = flag.String("logs", "/home/ec2-user/app/", "Directory to use for log storage")
 
 func main() {
 
