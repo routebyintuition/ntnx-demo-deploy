@@ -28,7 +28,7 @@ func logInit(logLocation string) {
 			Error.Println("could not find current directory: ", err)
 		}
 		Error.Println("current log directory to fail: ", path) //
-		log.Fatalln("Failed to open log file ", logFileLocation, ":", err)
+		log.Fatalln("Failed to open/create log file ", logFileLocation, ":", err)
 	}
 
 	infoHandle := io.MultiWriter(logFile, os.Stdout)
