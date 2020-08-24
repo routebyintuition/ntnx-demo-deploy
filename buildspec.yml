@@ -12,6 +12,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - server-one
-    - web
-    - dist
+    - "**/*"
