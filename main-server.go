@@ -40,7 +40,7 @@ func main() {
 	Info.Println("Application log file: ", *logs+"app_logs")
 	Info.Println("Server port numer: ", *port)
 
-	dist := http.FileServer(http.Dir("dist/"))
+	dist := http.FileServer(http.Dir("/home/ec2-user/dist/"))
 
 	http.Handle("/dist/", http.StripPrefix("/dist", dist))
 	http.Handle("/css/", dist)
